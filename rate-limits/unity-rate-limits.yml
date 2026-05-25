@@ -1,0 +1,37 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Unity
+providerId: unity-com
+created: '2026-05-25'
+modified: '2026-05-25'
+reconciled: true
+tags:
+  - Rate Limiting
+  - Gaming
+  - Unity Gaming Services
+description: Reconciled rate-limit posture for Unity Gaming Services REST APIs at services.api.unity.com. Each
+  service publishes its own limits in the service-specific docs at services.docs.unity.com; standard HTTP 429 is
+  returned with Retry-After when limits are exceeded. Multiplay (Game Server Hosting) is subject to fleet-level
+  concurrency and machine-availability quotas.
+sources:
+  - https://services.docs.unity.com/
+  - https://docs.unity.com/ugs/en-us/manual
+  - https://docs.unity.com/ugs/en-us/manual/game-server-hosting/manual/concepts/pricing
+headers:
+  limit: x-ratelimit-limit
+  remaining: x-ratelimit-remaining
+  reset: x-ratelimit-reset
+  retryAfter: retry-after
+responseCodes:
+  throttled: 429
+  quotaExceeded: 429
+algorithm: per-service-token-bucket
+notes:
+  - Limits are documented per service at services.docs.unity.com/{service}/{version}/.
+  - Player Authentication tokens are short-lived JWTs (~1 hour); refresh tokens are issued separately.
+  - Cloud Save enforces per-key size and per-player document count limits.
+  - Cloud Code execution duration and memory are bounded; long-running work should be split into multiple
+    invocations or offloaded to Triggers/Scheduler.
+  - Multiplay fleets enforce machine availability quotas separate from API rate limits.
+  - Analytics ingest enforces per-event-size limits and may aggregate at server side.

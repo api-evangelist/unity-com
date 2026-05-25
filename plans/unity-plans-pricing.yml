@@ -1,0 +1,176 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Unity
+providerId: unity-com
+created: '2026-05-25'
+modified: '2026-05-25'
+reconciled: true
+tags:
+  - Real-Time 3D
+  - Gaming
+  - Unity Gaming Services
+  - Game Engine
+description: 'Reconciled plans for the Unity engine subscription tiers and per-service usage pricing for Unity Gaming
+  Services (UGS). Engine seats are billed annually or monthly; UGS services are pay-as-you-go with free MAU/storage
+  thresholds. Sources: unity.com/products, unity.com/products/pricing-updates, unity.com/products/gaming-services/pricing.'
+sources:
+  - https://unity.com/products
+  - https://unity.com/products/pricing-updates
+  - https://unity.com/products/gaming-services/pricing
+  - https://docs.unity.com/ugs/en-us/manual/game-server-hosting/manual/concepts/pricing
+plans:
+  - id: unity-personal
+    name: Unity Personal
+    type: seat
+    description: Free tier for individuals, students, and organizations under $200K in annual revenue or funding.
+    entries:
+      - label: Seat
+        name: seat
+        type: free
+        metric: seat
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: true
+    elements:
+      - Unity Editor (Personal license)
+      - Splash screen required
+      - Access to Unity Cloud free tier (25 GB Version Control storage from Q1 2026)
+      - Community support
+  - id: unity-pro
+    name: Unity Pro
+    type: seat
+    description: Professional tier for studios and teams. 2026 pricing increases ~5% effective 12 Jan 2026.
+    entries:
+      - label: Annual seat
+        name: seat_annual
+        type: licensed
+        metric: seat
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: '2310.00'
+        userMultiplied: true
+      - label: Monthly seat
+        name: seat_monthly
+        type: licensed
+        metric: seat
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '210.00'
+        userMultiplied: true
+    elements:
+      - Unity Editor (Pro license)
+      - Customizable splash screen
+      - Premium support
+      - Build Server, Plastic SCM seats, UGS commercial entitlements
+      - Note: Havok Physics no longer bundled with 6.3 LTS Pro plans
+  - id: unity-enterprise
+    name: Unity Enterprise
+    type: contact
+    description: Custom enterprise contracts; annual seat pricing typically starts ~$4,000–$5,000 per seat.
+    entries:
+      - label: Seat
+        name: seat
+        type: licensed
+        metric: seat
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: Contact
+        userMultiplied: true
+    elements:
+      - All Unity Pro features
+      - Source-code access (optional)
+      - Premier Success Support
+      - Custom contract terms
+      - Dedicated technical account management
+  - id: unity-industry
+    name: Unity Industry
+    type: contact
+    description: Industry vertical bundle for non-game customers (Pixyz, CAD ingest, digital twins).
+    entries:
+      - label: Seat
+        name: seat
+        type: licensed
+        metric: seat
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: Contact
+        userMultiplied: true
+    elements:
+      - Unity Pro Editor
+      - Pixyz Plugin and Studio
+      - Industry sample projects
+      - Visual scripting and XR tooling for non-game verticals
+  - id: ugs-cloud-code
+    name: UGS — Cloud Code
+    type: usage-based
+    description: Server-authoritative scripts and C# modules billed by compute-seconds.
+    entries:
+      - label: Compute hour
+        name: compute_hour
+        type: metered
+        metric: hour
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.072'
+        userMultiplied: false
+  - id: ugs-multiplayer-suite
+    name: UGS — Multiplayer Suite (Lobby, Relay, Matchmaker, Distributed Authority)
+    type: usage-based
+    description: Multiplayer services priced by CCU (concurrent users) and data transferred; consult the UGS Pricing
+      Estimator for current rates per service.
+    entries:
+      - label: See pricing estimator
+        name: estimator
+        type: metered
+        metric: usage
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: Variable
+        userMultiplied: false
+  - id: ugs-version-control
+    name: UGS — Unity Version Control (UVCS / Plastic SCM)
+    type: usage-based
+    description: Public-cloud hosted source control. Seat charges removed in Q1 2026; free tier expanded to 25 GB.
+    entries:
+      - label: Free storage
+        name: storage_free
+        type: free
+        metric: gigabyte
+        limit: 25
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+  - id: ugs-multiplay
+    name: UGS — Multiplay (Game Server Hosting)
+    type: usage-based
+    description: Dedicated server hosting. Operated by Rocket Science Group after 31 March 2026. Billed by machine
+      availability (CPU cores + 8 GB RAM per machine).
+    entries:
+      - label: Machine availability
+        name: machine_hour
+        type: metered
+        metric: hour
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: Variable
+        userMultiplied: false

@@ -1,0 +1,71 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Unity
+providerId: unity-com
+created: '2026-05-25'
+modified: '2026-05-25'
+reconciled: true
+tags:
+  - FinOps
+  - Cost Management
+  - FOCUS
+  - Gaming
+  - Real-Time 3D
+description: FOCUS-aligned FinOps definition for Unity. Combines seat-based engine licensing (Pro, Enterprise,
+  Industry) with usage-based pricing for Unity Gaming Services (Cloud Code, Cloud Save, multiplayer suite, Multiplay,
+  Vivox, Version Control) and ad-revenue monetization via LevelPlay.
+sources:
+  - https://unity.com/products
+  - https://unity.com/products/pricing-updates
+  - https://unity.com/products/gaming-services/pricing
+  - https://docs.unity.com/ugs/en-us/manual/game-server-hosting/manual/concepts/pricing
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Unity Technologies
+serviceCategory: Developer Tools and Gaming Backend
+billingModel:
+  pricingCategory: Hybrid (Seat + Usage-Based)
+  billingFrequency: Monthly or Annual
+  billingCurrency: USD
+  chargeCategories:
+    - Usage
+    - Purchase
+    - Subscription
+    - Tax
+    - Credit
+    - Adjustment
+  primaryUnit: seat
+  secondaryUnits:
+    - compute-hour
+    - CCU
+    - GB-storage
+    - GB-egress
+    - machine-hour
+    - event
+costAllocation:
+  organizationKey: org_id
+  projectKey: project_id
+  environmentKey: environment_id
+  invoiceLevel: organization
+billingSurface:
+  dashboard: https://dashboard.unity.com
+  usageReports: https://dashboard.unity.com (per-service usage tabs)
+  invoiceDownload: Available via Unity Dashboard Billing section
+  apiAccess: Limited — most financial data is dashboard-only; SCIM and Access APIs expose org membership only
+optimizationLevers:
+  - Use the UGS Pricing Estimator to model Cloud Code, Lobby, Relay, and Distributed Authority spend before launch
+  - Cache Cloud Save reads via Remote Config or client-side memoization to reduce per-key billing
+  - Batch Cloud Code work via Triggers/Scheduler to amortize cold-start cost
+  - Pin fleets to lower-cost regions for Multiplay and right-size machine memory
+  - Migrate to Unity Version Control free tier (25 GB) post-Q1 2026 to drop UVCS seat charges
+notes:
+  - Unity Pro 2026 pricing increased 5% to $2,310/seat/yr ($210/mo) effective 12 January 2026.
+  - Multiplay (Game Server Hosting) direct operations ended 31 March 2026; service is now operated by Rocket
+    Science Group.
+  - Personal tier remains free for orgs with under $200K annual revenue/funding.
+  - Havok Physics is no longer bundled with Pro/Enterprise/Industry plans on 6.3 LTS.

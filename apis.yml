@@ -1,0 +1,469 @@
+aid: unity-com
+url: https://raw.githubusercontent.com/api-evangelist/unity-com/refs/heads/main/apis.yml
+apis:
+- aid: unity-com:unity-authentication-api
+  name: Unity Authentication API
+  tags:
+  - Authentication
+  - Identity
+  - Player Auth
+  - Gaming
+  humanURL: https://services.docs.unity.com/auth/v2/
+  properties:
+  - url: https://services.docs.unity.com/auth/v2/
+    type: Documentation
+  - url: https://docs.unity.com/ugs/en-us/manual/authentication/manual/rest-api
+    type: Documentation
+  description: Player Authentication for Unity Gaming Services. Anonymous, social (Apple/Google/Facebook/Steam/Oculus/PlayStation/Xbox/Nintendo),
+    username/password, and custom-ID sign-in flows that mint Unity player tokens. Provides identity linking, session
+    refresh, and the access tokens consumed by every other UGS service. Available as REST endpoints at
+    services.api.unity.com/auth/v2 or via the Unity Authentication SDK.
+- aid: unity-com:unity-cloud-save-api
+  name: Unity Cloud Save API
+  tags:
+  - Cloud Save
+  - Gaming
+  - Storage
+  humanURL: https://services.docs.unity.com/cloud-save/v1/
+  properties:
+  - url: https://services.docs.unity.com/cloud-save/v1/
+    type: Documentation
+  - url: https://services.docs.unity.com/cloud-save-admin/v1/
+    type: Documentation
+  - url: https://docs.unity.com/ugs/en-us/manual/cloud-save/manual/tutorials/rest-api
+    type: Documentation
+  description: Per-player and per-game-session key/value data persistence with versioning, conflict resolution, and
+    server-authoritative write protection. Includes a Player Data API for player-scoped state and an Admin API for
+    bulk read/write, deletion, and migrations.
+- aid: unity-com:unity-cloud-code-api
+  name: Unity Cloud Code API
+  tags:
+  - Cloud Code
+  - Gaming
+  - Serverless
+  - Modules
+  humanURL: https://services.docs.unity.com/cloud-code/v1/
+  properties:
+  - url: https://services.docs.unity.com/cloud-code/v1/
+    type: Documentation
+  - url: https://services.docs.unity.com/cloud-code-admin/v1/
+    type: Documentation
+  description: Server-authoritative JavaScript scripts and C# modules executed in Unity's managed runtime. Bill is
+    per-compute-second ($0.072/compute-hour). Cloud Code exposes both a runtime invocation API (called from the
+    client) and an Admin API for publishing scripts, deploying C# modules, and inspecting executions.
+- aid: unity-com:unity-economy-api
+  name: Unity Economy API
+  tags:
+  - Economy
+  - Currency
+  - Inventory
+  - Virtual Goods
+  - Gaming
+  humanURL: https://services.docs.unity.com/economy-admin/v2/
+  properties:
+  - url: https://services.docs.unity.com/economy-admin/v2/
+    type: Documentation
+  description: Server-authoritative virtual economy primitives — currencies, inventory items, virtual purchases, and
+    real-money purchases — with player balances, inventories, and transaction history. Used to back live-ops shops
+    and game economies.
+- aid: unity-com:unity-leaderboards-api
+  name: Unity Leaderboards API
+  tags:
+  - Leaderboards
+  - Gaming
+  - Social
+  humanURL: https://services.docs.unity.com/leaderboards-admin/v1/
+  properties:
+  - url: https://services.docs.unity.com/leaderboards-admin/v1/
+    type: Documentation
+  description: Server-authoritative ranked leaderboards with bucketed, partitioned, and tiered scoring strategies.
+    Supports score reset schedules, paginated rankings around a player, and bulk archive/restore.
+- aid: unity-com:unity-remote-config-api
+  name: Unity Remote Config API
+  tags:
+  - Remote Config
+  - Feature Flags
+  - Gaming
+  humanURL: https://services.docs.unity.com/remote-config-admin/v1/
+  properties:
+  - url: https://services.docs.unity.com/remote-config-admin/v1/
+    type: Documentation
+  description: Dynamic configuration delivery — feature flags, balance values, game settings — segmented by
+    audiences and overridden by campaigns. Configs are versioned and can be staged across environments.
+- aid: unity-com:unity-relay-api
+  name: Unity Relay API
+  tags:
+  - Multiplayer
+  - Relay
+  - Networking
+  - Gaming
+  humanURL: https://services.docs.unity.com/relay-allocations/v1/
+  properties:
+  - url: https://services.docs.unity.com/relay-allocations/v1/
+    type: Documentation
+  description: NAT-traversal relay service that allows peer-to-peer multiplayer sessions without exposing player
+    IPs. Allocates host/join codes, encrypted DTLS connections, and short-lived relay endpoints across global
+    regions.
+- aid: unity-com:unity-lobby-api
+  name: Unity Lobby API
+  tags:
+  - Multiplayer
+  - Lobby
+  - Matchmaking
+  - Gaming
+  humanURL: https://services.docs.unity.com/guides/ugs-cli/latest/lobby/Lobby%20Command%20Line/overview/
+  properties:
+  - url: https://services.docs.unity.com/guides/ugs-cli/latest/lobby/Lobby%20Command%20Line/overview/
+    type: Documentation
+  description: Player-meeting service for creating, listing, joining, and managing lobbies with custom metadata,
+    host migration, and integration with Relay or Multiplay. Supports private codes, region affinity, and player
+    presence.
+- aid: unity-com:unity-matchmaker-api
+  name: Unity Matchmaker API
+  tags:
+  - Multiplayer
+  - Matchmaking
+  - Gaming
+  humanURL: https://services.docs.unity.com/matchmaker-admin/v3/
+  properties:
+  - url: https://services.docs.unity.com/matchmaker-admin/v3/
+    type: Documentation
+  description: Rule-based matchmaker that places players into game sessions using skill, latency, party, and custom
+    attributes. Integrates with Multiplay or Relay-backed sessions and exposes Admin APIs for queue, pool, and rule
+    management.
+- aid: unity-com:unity-multiplay-api
+  name: Unity Multiplay (Game Server Hosting) API
+  tags:
+  - Multiplayer
+  - Game Servers
+  - Hosting
+  - Gaming
+  humanURL: https://services.docs.unity.com/multiplay-config/v1/
+  properties:
+  - url: https://services.docs.unity.com/multiplay-config/v1/
+    type: Documentation
+  - url: https://docs.unity.com/ugs/en-us/manual/game-server-hosting/manual/concepts/pricing
+    type: Documentation
+  description: Global dedicated game-server hosting (Multiplay). APIs cover fleets, builds, build configurations,
+    machines, allocations, and queues. Note Unity ended direct operations of Multiplay on 31 March 2026 and
+    licensed the service to Rocket Science Group; APIs continue under that operator.
+- aid: unity-com:unity-vivox-api
+  name: Unity Vivox Voice and Text Chat API
+  tags:
+  - Voice
+  - Chat
+  - Moderation
+  - Multiplayer
+  - Gaming
+  humanURL: https://services.docs.unity.com/moderation/v1/
+  properties:
+  - url: https://services.docs.unity.com/moderation/v1/
+    type: Documentation
+  description: Vivox in-game voice and text chat with moderation, channel management, and recordings. The
+    Moderation REST API handles user bans, channel mutes, transcript retrieval, and compliance evidence.
+- aid: unity-com:unity-friends-api
+  name: Unity Friends API
+  tags:
+  - Social
+  - Friends
+  - Presence
+  - Gaming
+  humanURL: https://services.docs.unity.com/friends/v1/
+  properties:
+  - url: https://services.docs.unity.com/friends/v1/
+    type: Documentation
+  description: Player social graph — friends, blocks, invitations, and presence — with cross-platform identifiers.
+    Integrates with Player Names and Authentication for display and identity resolution.
+- aid: unity-com:unity-analytics-api
+  name: Unity Analytics API
+  tags:
+  - Analytics
+  - Events
+  - Telemetry
+  - Gaming
+  humanURL: https://services.docs.unity.com/analytics/v1/
+  properties:
+  - url: https://services.docs.unity.com/analytics/v1/
+    type: Documentation
+  description: Game telemetry and live-ops analytics. Client API ingests standard and custom events; reporting
+    surfaces funnels, retention, monetization, and segmentation. Compatible with GDPR/COPPA consent flows.
+- aid: unity-com:unity-triggers-api
+  name: Unity Triggers API
+  tags:
+  - Triggers
+  - Automation
+  - Events
+  - Gaming
+  humanURL: https://services.docs.unity.com/triggers-admin/v1/
+  properties:
+  - url: https://services.docs.unity.com/triggers-admin/v1/
+    type: Documentation
+  description: Event-driven automation that fires Cloud Code in response to other UGS service events (Cloud Save
+    writes, Economy purchases, Authentication signups, etc.). The Admin API manages triggers, filters, and dead-letter
+    handling.
+- aid: unity-com:unity-scheduler-api
+  name: Unity Scheduler API
+  tags:
+  - Scheduler
+  - Cron
+  - Automation
+  - Gaming
+  humanURL: https://services.docs.unity.com/scheduler-admin/v1/
+  properties:
+  - url: https://services.docs.unity.com/scheduler-admin/v1/
+    type: Documentation
+  description: Scheduled execution of Cloud Code scripts/modules. Manage one-shot and recurring jobs with timezone
+    awareness, retries, and execution history.
+- aid: unity-com:unity-content-delivery-api
+  name: Unity Content Delivery API
+  tags:
+  - Content Delivery
+  - Asset Bundles
+  - CDN
+  - Gaming
+  humanURL: https://services.docs.unity.com/content-delivery-management/v1/
+  properties:
+  - url: https://services.docs.unity.com/content-delivery-management/v1/
+    type: Documentation
+  - url: https://services.docs.unity.com/content-delivery-client/v1/
+    type: Documentation
+  description: Versioned asset/bundle distribution. Admin (management) API for buckets, badges, releases, and
+    entries; client API resolves the active release for a player environment and serves signed asset URLs.
+- aid: unity-com:unity-monetize-api
+  name: Unity Monetize and Ads API
+  tags:
+  - Monetization
+  - Advertising
+  - LevelPlay
+  - Gaming
+  humanURL: https://services.docs.unity.com/monetize/v1/
+  properties:
+  - url: https://services.docs.unity.com/monetize/v1/
+    type: Documentation
+  - url: https://services.docs.unity.com/advertise/v1/
+    type: Documentation
+  - url: https://services.docs.unity.com/statistics/v2/
+    type: Documentation
+  description: Programmatic management of Unity's ad-monetization surface (formerly ironSource / LevelPlay).
+    Includes Monetize (publisher placements, mediation), Advertise (user-acquisition campaigns), and Statistics
+    (reporting) APIs.
+- aid: unity-com:unity-assets-manager-api
+  name: Unity Asset Manager API
+  tags:
+  - Assets
+  - Digital Asset Management
+  - Pipeline
+  humanURL: https://services.docs.unity.com/assets-manager/v1/
+  properties:
+  - url: https://services.docs.unity.com/assets-manager/v1/
+    type: Documentation
+  - url: https://services.docs.unity.com/assets-manager-external/v1/
+    type: Documentation
+  description: Unity Cloud Asset Manager — a digital asset management API for 3D, image, audio, and animation
+    assets used across game and Unity Industry workflows. Supports collections, versions, transformations, and
+    third-party (external) ingest.
+- aid: unity-com:unity-admin-and-iam-api
+  name: Unity Admin and Identity (SCIM, Access, Core) API
+  tags:
+  - Administrative
+  - IAM
+  - SCIM
+  - Identity
+  humanURL: https://services.docs.unity.com/unity/v1/
+  properties:
+  - url: https://services.docs.unity.com/unity/v1/
+    type: Documentation
+  - url: https://services.docs.unity.com/access/v1/
+    type: Documentation
+  - url: https://services.docs.unity.com/access-resource-policy/v1/
+    type: Documentation
+  - url: https://services.docs.unity.com/scim/v2/
+    type: Documentation
+  - url: https://services.docs.unity.com/release/v1/
+    type: Documentation
+  description: Administrative control plane for Unity organizations, projects, environments, and resource policies.
+    Includes SCIM 2.0 for SSO/identity provisioning, Access for IAM policies, Unity Core for org/project entities,
+    and Releases for version metadata.
+name: Unity
+tags:
+- Real-Time 3D
+- Game Engine
+- Gaming
+- Multiplayer
+- Cloud
+- Live Operations
+- Digital Twins
+- XR
+- ML-Agents
+- Asset Pipeline
+kind: contract
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+common:
+- type: Portal
+  url: https://unity.com
+- type: Portal
+  url: https://cloud.unity.com
+- type: Portal
+  url: https://dashboard.unity.com
+- url: https://unity.com/products
+  type: Documentation
+- url: https://unity.com/products/unity-engine
+  type: Documentation
+- url: https://docs.unity.com/
+  type: Documentation
+- url: https://docs.unity3d.com/Manual/index.html
+  name: Unity Engine Manual
+  type: Documentation
+- url: https://docs.unity3d.com/ScriptReference/index.html
+  name: Unity Scripting API Reference (C#)
+  type: Documentation
+- url: https://docs.unity.com/ugs/en-us/manual
+  name: Unity Gaming Services Manual
+  type: Documentation
+- url: https://services.docs.unity.com/
+  name: Unity Services Web API Docs
+  type: Documentation
+- url: https://docs.unity.com/cloud
+  name: Unity Cloud
+  type: Documentation
+- url: https://learn.unity.com
+  type: Training
+- url: https://discussions.unity.com
+  type: Forum
+- url: https://support.unity.com
+  type: Support
+- url: https://status.unity.com
+  type: StatusPage
+- url: https://unity.com/releases
+  type: ChangeLog
+- url: https://unity.com/legal/terms-of-service
+  type: TermsOfService
+- url: https://unity.com/legal/privacy-policy
+  type: PrivacyPolicy
+- url: https://unity.com/security
+  type: TrustCenter
+- url: https://id.unity.com
+  type: SignUp
+- url: https://dashboard.unity.com
+  type: SignUp
+- url: https://unity.com/blog
+  type: Blog
+- url: https://blog.unity.com
+  type: Blog
+- url: https://github.com/Unity-Technologies
+  type: GitHubOrganization
+- url: https://github.com/Unity-Technologies/ml-agents
+  name: ML-Agents Toolkit
+  type: SDK
+- url: https://github.com/Unity-Technologies/com.unity.netcode.gameobjects
+  name: Netcode for GameObjects
+  type: SDK
+- url: https://github.com/Unity-Technologies/EntityComponentSystemSamples
+  name: Entity Component System Samples
+  type: CodeExamples
+- url: https://github.com/Unity-Technologies/InputSystem
+  name: Input System
+  type: SDK
+- url: https://github.com/Unity-Technologies/arfoundation-samples
+  name: AR Foundation Samples
+  type: CodeExamples
+- url: https://github.com/Unity-Technologies/UnityCsReference
+  name: Unity C# Reference Source
+  type: SDK
+- url: https://github.com/Unity-Technologies/com.unity.multiplayer.samples.coop
+  name: Multiplayer Co-Op Samples
+  type: CodeExamples
+- url: https://docs.unity.com/ugs-overview/manual/ugs-cli/install
+  name: Unity Gaming Services CLI (UGS CLI)
+  type: CLI
+- url: https://unity.com/products/gaming-services
+  name: Unity Gaming Services Overview
+  type: Portal
+- url: https://unity.com/products/gaming-services/pricing
+  name: UGS Pricing
+  type: Pricing
+- url: https://unity.com/products/pricing-updates
+  name: Unity 2026 Pricing Updates
+  type: Pricing
+- url: https://unity.com/products
+  name: Unity Plans and Pricing
+  type: Plans
+- url: https://docs.unity.com/ugs/en-us/manual/authentication/manual/rest-api
+  name: Player Authentication REST API
+  type: Documentation
+- url: https://docs.unity.com/ugs/en-us/manual/cloud-save/manual/tutorials/rest-api
+  name: Cloud Save REST API Tutorial
+  type: Documentation
+- url: https://docs.unity.com/ugs/en-us/manual/cloud-code/manual/modules/how-to-guides/write-modules/rest-api
+  name: Cloud Code Modules HTTP APIs
+  type: Documentation
+- url: plans/unity-plans-pricing.yml
+  type: Plans
+- url: rate-limits/unity-rate-limits.yml
+  type: RateLimits
+- url: finops/unity-finops.yml
+  type: FinOps
+- type: Features
+  data:
+  - Unity Engine — cross-platform real-time 3D engine for games, simulations, XR, automotive, and industrial digital twins
+  - Unity 6 (current) and 6.3 LTS — latest LTS release line with HDRP, URP, DOTS/ECS, Burst, and Job System
+  - C# scripting with hot-reload, the Unity Scripting API, and full source available via UnityCsReference
+  - Deployments to 25+ platforms — Windows, macOS, Linux, iOS, Android, WebGL, PlayStation, Xbox, Nintendo Switch,
+    Meta Quest, Apple Vision Pro, HoloLens, and embedded targets
+  - Unity Gaming Services (UGS) — production-grade backend for live games covering identity, persistence, economy,
+    multiplayer, voice, content delivery, analytics, automation, and monetization
+  - 30+ Unity Services REST APIs documented at services.docs.unity.com with consistent /service/version/ paths and
+    OAuth2 bearer auth (Authentication, Cloud Save, Cloud Code, Economy, Leaderboards, Remote Config, Relay,
+    Lobby, Matchmaker, Multiplay, Vivox, Friends, Analytics, Triggers, Scheduler, Content Delivery, Asset Manager,
+    Monetize/Advertise, SCIM, Access, Unity Core, Releases, Observability, Collaboration, Annotations, Presence,
+    QoS, Distributed Authority, Session Observability, Workflow Engine, Storage, App Linking, Automation, Data
+    Streaming)
+  - Cloud Code — server-authoritative JavaScript scripts and C# modules at $0.072/compute-hour
+  - Multiplay (Game Server Hosting) — global dedicated server fleets, transitioning to Rocket Science Group as of
+    March 31 2026
+  - Vivox — embedded voice and text chat with built-in moderation
+  - LevelPlay (formerly ironSource) — mediation, user acquisition, and statistics APIs for monetized games
+  - Unity Cloud — Asset Manager, Version Control (Plastic SCM), Build Automation, Collaboration, Annotations, and
+    Workflow Engine for asset, source-control, and DevOps pipelines
+  - Unity Industry — Pixyz, CAD ingest, AR/VR enablement, and digital-twin tooling for non-game verticals
+  - ML-Agents — open-source deep-reinforcement-learning toolkit for training AI agents in Unity environments
+  - Netcode for GameObjects, Netcode for Entities, Distributed Authority, and Relay/Multiplay for multiplayer
+    architectures from peer-to-peer to authoritative dedicated servers
+  - AR Foundation for cross-platform AR (ARKit, ARCore, Magic Leap, HoloLens, Vision Pro)
+  - Render pipelines — Built-in, Universal (URP), High Definition (HDRP) — with Shader Graph and Visual Effect Graph
+  - DOTS / Entity Component System — data-oriented runtime with Burst compiler and the Jobs System for high-perf
+    simulations and large worlds
+  - Addressables and Cloud Content Delivery for live asset updates without app re-submission
+  - Unity Version Control (UVCS / Plastic SCM) with free 25GB tier from Q1 2026 and seat-free public-cloud hosting
+  - Unity Pro and Enterprise plans on 6.3 LTS no longer include Havok Physics; Personal remains free under $200K
+    annual revenue or funding
+  - 2026 pricing: Pro $210/seat/mo or $2,310/seat/yr (5% increase from 2025); Enterprise custom; Industry custom
+  - 100+ official C#/.NET packages distributed via Unity Package Manager (UPM)
+  - Postman, OpenAPI-style REST docs, and the UGS CLI as primary integration surfaces for the backend services
+  - Unity Authentication tokens (player JWTs) are the universal bearer for all client-facing UGS APIs
+  sources:
+  - https://services.docs.unity.com/
+  - https://unity.com/products
+  - https://unity.com/products/gaming-services
+  - https://unity.com/products/pricing-updates
+  - https://docs.unity.com/
+  - https://github.com/Unity-Technologies
+  updated: '2026-05-25'
+created: '2026-05-25T00:00:00.000Z'
+modified: '2026-05-25'
+position: Providing
+description: Unity is a real-time 3D content creation platform — the Unity engine powers cross-platform games,
+  simulations, XR experiences, and digital twins, while Unity Gaming Services (UGS) and Unity Cloud provide a
+  production backend for live games and 3D pipelines. UGS exposes a coherent set of 30+ REST APIs at
+  services.api.unity.com covering authentication, cloud save, cloud code, economy, leaderboards, remote config,
+  relay, lobby, matchmaker, game-server hosting (Multiplay), voice/text chat (Vivox), friends, analytics, triggers,
+  scheduler, content delivery, monetization/LevelPlay, asset management, and organization administration. Unity
+  also ships open-source frameworks including ML-Agents, Netcode for GameObjects, and the Input System, and hosts
+  the canonical Unity C# reference source on GitHub.
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com
+  X: apievangelist
+  url: https://apievangelist.com
+specificationVersion: '0.16'
