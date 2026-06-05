@@ -1,0 +1,161 @@
+name: Unity Gaming Services Vocabulary
+description: >
+  Core domain terms for Unity Gaming Services (UGS) — the production backend
+  for live games and real-time 3D applications. Covers authentication, cloud
+  persistence, multiplayer infrastructure, economy, analytics, content delivery,
+  and Unity's cross-platform engine concepts.
+version: "1.0"
+terms:
+  - term: PlayerToken
+    definition: >
+      A short-lived JSON Web Token (JWT) issued by the Unity Authentication
+      service after a player signs in. Acts as the universal bearer credential
+      for all client-facing UGS APIs (Cloud Save, Economy, Leaderboards,
+      Friends, etc.).
+    tags:
+      - authentication
+      - identity
+      - security
+
+  - term: ServiceAccount
+    definition: >
+      A server-side credential (key ID + secret) used by game servers and
+      trusted back-ends to call admin and server-authoritative UGS APIs without
+      a player token. Created in the Unity Dashboard under a project.
+    tags:
+      - authentication
+      - iam
+      - server-side
+
+  - term: UGSProject
+    definition: >
+      A logical container in the Unity Dashboard that groups all UGS resources
+      (environments, services, configurations) for a single game title. Every
+      UGS API call includes the project's UUID in the request path or header.
+    tags:
+      - administration
+      - multi-tenant
+
+  - term: Environment
+    definition: >
+      An isolated deployment scope within a UGS project (e.g., production,
+      staging, development). Cloud Save data, Economy configs, Remote Config
+      values, and other service state are scoped per environment.
+    tags:
+      - deployment
+      - configuration
+
+  - term: CloudSaveKey
+    definition: >
+      A named slot in the Unity Cloud Save service that stores a JSON value for
+      a player or for the entire project. Supports versioning, server-side write
+      protection, and conflict resolution.
+    tags:
+      - cloud-save
+      - persistence
+      - storage
+
+  - term: VirtualCurrency
+    definition: >
+      A denomination of in-game money defined in the Unity Economy service (e.g.,
+      Gold, Gems). Players hold balances that can be earned, spent, or granted
+      via Economy API transactions.
+    tags:
+      - economy
+      - monetization
+      - virtual-goods
+
+  - term: InventoryItem
+    definition: >
+      A non-fungible digital good (weapon, skin, consumable) defined in the
+      Unity Economy service and associated with a player's inventory. Items have
+      instance data and can be granted, consumed, or transferred.
+    tags:
+      - economy
+      - inventory
+      - virtual-goods
+
+  - term: RelayAllocation
+    definition: >
+      A short-lived server endpoint provisioned by Unity Relay that lets two or
+      more peers exchange UDP traffic without exposing their IP addresses. The
+      allocating player receives a join code that other players use to connect.
+    tags:
+      - multiplayer
+      - relay
+      - networking
+      - nat-traversal
+
+  - term: Lobby
+    definition: >
+      A transient matchmaking room in Unity Lobby where players gather before a
+      game session begins. Has configurable metadata, host-migration support,
+      private join codes, and optional Relay or Multiplay integration.
+    tags:
+      - multiplayer
+      - social
+      - matchmaking
+
+  - term: MatchmakingQueue
+    definition: >
+      A named pool of players in the Unity Matchmaker service that applies
+      rule-based logic (skill, latency, party size) to form balanced game sessions.
+      Queues are configured via the Admin API and reference Multiplay or Relay
+      backends.
+    tags:
+      - multiplayer
+      - matchmaking
+      - gaming
+
+  - term: CloudCodeModule
+    definition: >
+      A compiled C# (.dll) package deployed to Unity Cloud Code that runs
+      server-authoritative logic. Modules expose typed endpoints callable from
+      the client SDK and bill at $0.072 per compute-hour.
+    tags:
+      - cloud-code
+      - serverless
+      - server-authoritative
+
+  - term: RemoteConfigEntry
+    definition: >
+      A named key-value pair in Unity Remote Config that delivers dynamic game
+      settings (feature flags, balance values, UI strings) to clients at runtime
+      without requiring an app update. Entries can be segmented by audience or
+      overridden by campaigns.
+    tags:
+      - remote-config
+      - feature-flags
+      - live-ops
+
+  - term: ContentDeliveryBadge
+    definition: >
+      A named pointer in Unity Content Delivery (CCD) that references a specific
+      release of a bucket. Clients resolve a badge to get signed download URLs
+      for the current asset bundle set without knowing the exact release version.
+    tags:
+      - content-delivery
+      - cdn
+      - asset-bundles
+
+  - term: VivoxChannel
+    definition: >
+      A named audio/text communication room managed by Unity's Vivox service.
+      Supports positional 3D audio, text messaging, moderation actions (mute,
+      ban), and compliance recordings. Accessible via the Moderation REST API.
+    tags:
+      - voice
+      - chat
+      - moderation
+      - vivox
+
+  - term: LevelPlayMediation
+    definition: >
+      Unity's in-app advertising mediation layer (formerly ironSource / LevelPlay)
+      that waterfalls ad demand sources to maximize eCPM for game publishers.
+      Managed via the Monetize Admin API.
+    tags:
+      - monetization
+      - advertising
+      - levelplay
+      - mediation

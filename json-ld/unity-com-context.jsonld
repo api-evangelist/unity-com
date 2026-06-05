@@ -1,0 +1,237 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "ugs": "https://services.api.unity.com/vocab#",
+    "unity": "https://unity.com/vocab#",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "sameAs": "schema:sameAs",
+    "identifier": "schema:identifier",
+    "version": "schema:version",
+    "dateModified": "schema:dateModified",
+
+    "Organization": "schema:Organization",
+    "SoftwareApplication": "schema:SoftwareApplication",
+    "WebAPI": "schema:WebAPI",
+    "Product": "schema:Product",
+
+    "Unity": {
+      "@id": "schema:Organization",
+      "@type": "@id"
+    },
+    "unityUrl": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "industry": {
+      "@id": "schema:industry"
+    },
+
+    "UGSProject": {
+      "@id": "ugs:Project",
+      "@type": "@id"
+    },
+    "projectId": {
+      "@id": "ugs:projectId"
+    },
+    "environmentId": {
+      "@id": "ugs:environmentId"
+    },
+    "Environment": {
+      "@id": "ugs:Environment",
+      "@type": "@id"
+    },
+
+    "PlayerToken": {
+      "@id": "ugs:PlayerToken",
+      "@type": "@id"
+    },
+    "playerId": {
+      "@id": "ugs:playerId"
+    },
+    "expiresAt": {
+      "@id": "ugs:expiresAt",
+      "@type": "schema:DateTime"
+    },
+
+    "ServiceAccount": {
+      "@id": "ugs:ServiceAccount",
+      "@type": "@id"
+    },
+    "keyId": {
+      "@id": "ugs:keyId"
+    },
+
+    "CloudSaveKey": {
+      "@id": "ugs:CloudSaveKey",
+      "@type": "@id"
+    },
+    "key": {
+      "@id": "ugs:key"
+    },
+    "value": {
+      "@id": "ugs:value"
+    },
+    "writeLock": {
+      "@id": "ugs:writeLock"
+    },
+
+    "VirtualCurrency": {
+      "@id": "ugs:VirtualCurrency",
+      "@type": "@id"
+    },
+    "balance": {
+      "@id": "ugs:balance",
+      "@type": "schema:Number"
+    },
+    "initial": {
+      "@id": "ugs:initialBalance",
+      "@type": "schema:Number"
+    },
+    "max": {
+      "@id": "ugs:maxBalance",
+      "@type": "schema:Number"
+    },
+
+    "InventoryItem": {
+      "@id": "ugs:InventoryItem",
+      "@type": "@id"
+    },
+    "instanceId": {
+      "@id": "ugs:instanceId"
+    },
+    "inventoryItemId": {
+      "@id": "ugs:inventoryItemId"
+    },
+
+    "RelayAllocation": {
+      "@id": "ugs:RelayAllocation",
+      "@type": "@id"
+    },
+    "allocationId": {
+      "@id": "ugs:allocationId"
+    },
+    "joinCode": {
+      "@id": "ugs:joinCode"
+    },
+    "region": {
+      "@id": "ugs:region"
+    },
+
+    "Lobby": {
+      "@id": "ugs:Lobby",
+      "@type": "@id"
+    },
+    "lobbyId": {
+      "@id": "ugs:lobbyId"
+    },
+    "lobbyCode": {
+      "@id": "ugs:lobbyCode"
+    },
+    "maxPlayers": {
+      "@id": "ugs:maxPlayers",
+      "@type": "schema:Number"
+    },
+
+    "MatchmakingQueue": {
+      "@id": "ugs:MatchmakingQueue",
+      "@type": "@id"
+    },
+    "queueName": {
+      "@id": "ugs:queueName"
+    },
+    "ticketId": {
+      "@id": "ugs:ticketId"
+    },
+
+    "RemoteConfigEntry": {
+      "@id": "ugs:RemoteConfigEntry",
+      "@type": "@id"
+    },
+    "schemaId": {
+      "@id": "ugs:schemaId"
+    },
+    "configType": {
+      "@id": "ugs:configType"
+    },
+
+    "ContentDeliveryBadge": {
+      "@id": "ugs:ContentDeliveryBadge",
+      "@type": "@id"
+    },
+    "bucketId": {
+      "@id": "ugs:bucketId"
+    },
+    "releaseId": {
+      "@id": "ugs:releaseId"
+    },
+    "badgeName": {
+      "@id": "ugs:badgeName"
+    },
+
+    "CloudCodeModule": {
+      "@id": "ugs:CloudCodeModule",
+      "@type": "@id"
+    },
+    "moduleName": {
+      "@id": "ugs:moduleName"
+    },
+    "scriptName": {
+      "@id": "ugs:scriptName"
+    },
+
+    "VivoxChannel": {
+      "@id": "ugs:VivoxChannel",
+      "@type": "@id"
+    },
+    "channelId": {
+      "@id": "ugs:channelId"
+    },
+
+    "Leaderboard": {
+      "@id": "ugs:Leaderboard",
+      "@type": "@id"
+    },
+    "leaderboardId": {
+      "@id": "ugs:leaderboardId"
+    },
+    "score": {
+      "@id": "ugs:score",
+      "@type": "schema:Number"
+    },
+    "rank": {
+      "@id": "ugs:rank",
+      "@type": "schema:Number"
+    },
+
+    "AnalyticsEvent": {
+      "@id": "ugs:AnalyticsEvent",
+      "@type": "@id"
+    },
+    "eventName": {
+      "@id": "ugs:eventName"
+    },
+    "sessionId": {
+      "@id": "ugs:sessionId"
+    }
+  },
+  "@type": "Organization",
+  "name": "Unity Technologies",
+  "url": "https://unity.com",
+  "sameAs": [
+    "https://cloud.unity.com",
+    "https://services.api.unity.com",
+    "https://github.com/Unity-Technologies"
+  ],
+  "description": "Unity is a real-time 3D content creation platform. Unity Gaming Services (UGS) provides a production backend for live games covering authentication, cloud save, economy, multiplayer, voice, analytics, content delivery, and monetization via 30+ REST APIs.",
+  "industry": [
+    "Game Engine",
+    "Real-Time 3D",
+    "Gaming Services",
+    "XR",
+    "Digital Twins",
+    "Simulation"
+  ]
+}
