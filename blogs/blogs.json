@@ -4,18 +4,15 @@
     {
       "source": "https://unity.com/blog",
       "feed_url": "https://unity.com/blog",
-      "title": "Unity Blog",
+      "title": "",
       "saved": 0,
       "method": "none"
     },
     {
       "source": "https://blog.unity.com",
-      "feed_url": "https://blog.unity.com",
-      "title": "Unity Developer Blog",
-      "saved": 0,
-      "method": "none"
+      "error": "HTTPError"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-05T00:00:00Z"
+  "fetched": "2026-06-14T20:42:17Z"
 }
