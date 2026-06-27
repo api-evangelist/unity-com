@@ -330,7 +330,7 @@ common:
 - url: https://learn.unity.com
   type: Training
 - url: https://discussions.unity.com
-  type: Forum
+  type: Forums
 - url: https://support.unity.com
   type: Support
 - url: https://status.unity.com
@@ -344,9 +344,9 @@ common:
 - url: https://unity.com/security
   type: TrustCenter
 - url: https://id.unity.com
-  type: SignUp
+  type: Signup
 - url: https://dashboard.unity.com
-  type: SignUp
+  type: Signup
 - url: https://unity.com/blog
   type: Blog
 - url: https://blog.unity.com
@@ -355,22 +355,22 @@ common:
   type: GitHubOrganization
 - url: https://github.com/Unity-Technologies/ml-agents
   name: ML-Agents Toolkit
-  type: SDK
+  type: SDKs
 - url: https://github.com/Unity-Technologies/com.unity.netcode.gameobjects
   name: Netcode for GameObjects
-  type: SDK
+  type: SDKs
 - url: https://github.com/Unity-Technologies/EntityComponentSystemSamples
   name: Entity Component System Samples
   type: CodeExamples
 - url: https://github.com/Unity-Technologies/InputSystem
   name: Input System
-  type: SDK
+  type: SDKs
 - url: https://github.com/Unity-Technologies/arfoundation-samples
   name: AR Foundation Samples
   type: CodeExamples
 - url: https://github.com/Unity-Technologies/UnityCsReference
   name: Unity C# Reference Source
-  type: SDK
+  type: SDKs
 - url: https://github.com/Unity-Technologies/com.unity.multiplayer.samples.coop
   name: Multiplayer Co-Op Samples
   type: CodeExamples

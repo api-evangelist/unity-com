@@ -2,17 +2,27 @@
   "repo": "unity-com",
   "feeds": [
     {
+      "source": "https://unity.com/blog/feed",
+      "feed_url": "https://unity.com/blog/feed",
+      "title": "",
+      "saved": 1,
+      "method": "feed"
+    },
+    {
       "source": "https://unity.com/blog",
-      "feed_url": "https://unity.com/blog",
+      "feed_url": "https://unity.com/blog/feed/",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "discovered"
     },
     {
       "source": "https://blog.unity.com",
-      "error": "HTTPError"
+      "feed_url": "https://blog.unity.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 1,
+  "fetched": "2026-06-27T12:03:07Z"
 }
