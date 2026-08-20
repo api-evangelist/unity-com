@@ -178,6 +178,11 @@ apis:
   name: Unity Analytics API
   tags:
   - Analytics
+  - Event
+  - Telemetry
+  - Gaming
+  tags_raw:
+  - Analytics
   - Events
   - Telemetry
   - Gaming
@@ -190,6 +195,11 @@ apis:
 - aid: unity-com:unity-triggers-api
   name: Unity Triggers API
   tags:
+  - Triggers
+  - Automation
+  - Event
+  - Gaming
+  tags_raw:
   - Triggers
   - Automation
   - Events
