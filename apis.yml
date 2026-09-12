@@ -333,6 +333,8 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/unity-com.png
 access: 3rd-Party
 common:
+- type: Website
+  url: https://www.unity.com/
 - type: TrustCenter
   url: security/unity-com-trust-center.yml
 - type: VulnerabilityDisclosure
